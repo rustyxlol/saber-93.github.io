@@ -13,11 +13,11 @@ hugo server
 
 Open the local address printed by Hugo.
 
-## Add photos
+## Add photos and albums
 
-Add image files (JPG and PNG are recommended; the theme advises against WebP)
-to a page bundle under `content/`. Each gallery should have an `index.md` and
-its images, for example:
+The easiest option is to drag photos into `content/gallery/`. JPG and PNG are
+recommended; the theme advises against WebP. The photos in that folder appear
+together in the **Gallery** album.
 
 ```text
 content/
@@ -27,11 +27,30 @@ content/
     lake.jpg
 ```
 
-The front matter in `index.md` sets the gallery title and description. Set
-`resources.params.cover: true` on an image to choose its cover.
+To sort photos into albums, make a new folder directly inside `content/` (next
+to `gallery`), copy `content/things/index.md` into it, change the `title` and
+`description` at the top of the file, then drag the album's photos into that
+same folder. For example:
+
+```text
+content/
+  family/
+    index.md
+    birthday.jpg
+  trips/
+    index.md
+    beach.jpg
+```
+
+The starter **Things** folder is ready to use: just drop photos into it. Empty
+albums appear on the site after you add a photo. You can rename this folder or
+create your own. Keep each album's `index.md` and photos together. To choose
+the cover photo, set `resources.params.cover: true` for that image in the
+album's `index.md`.
 
 ## Publish
 
-The GitHub Actions workflow builds and deploys the site when changes are pushed
-to `main`. In the repository settings, set **Pages → Build and deployment →
-Source** to **GitHub Actions**.
+After adding photos or editing album folders, save the changes and push them to
+the `main` branch to update the live site. The GitHub Actions workflow builds
+and deploys the site automatically. In the repository settings, set **Pages →
+Build and deployment → Source** to **GitHub Actions**.

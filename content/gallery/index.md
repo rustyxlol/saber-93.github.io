@@ -1,8 +1,8 @@
 ---
 title: Gallery
-description: A photo to get the gallery started.
+description: A collection of photos.
 resources:
-  - src: Never_gonna_give_you_up.jpg
+  - src: 16-02.jpg
     params:
       cover: true
 ---
