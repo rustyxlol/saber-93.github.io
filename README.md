@@ -48,6 +48,17 @@ create your own. Keep each album's `index.md` and photos together. To choose
 the cover photo, set `resources.params.cover: true` for that image in the
 album's `index.md`.
 
+## Choose a large featured photo
+
+The homepage can show one large featured album above the album cards. In that
+album's `index.md`, add `params.featured: true` to the front matter. The large
+image uses that album's cover photo (`resources.params.cover: true`). To change
+it, mark a different photo as the cover. The theme displays the most recently
+updated featured album, so remove `featured: true` from the old album if you
+want a different one to be featured. Add `private: true` to an album's front
+matter if you want it to appear only as the large featured item, not again in
+the album list below.
+
 ## Publish
 
 After adding photos or editing album folders, save the changes and push them to
